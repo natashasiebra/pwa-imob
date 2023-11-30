@@ -1,10 +1,11 @@
 *{
-  font-family: monospace;
- 
+  padding: 0px;
+  margin: 0px;
 }
 h1{
-  text-align: center;
-  font-size: 30px;
+  margin-left: 10%;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
 
 }
 .app{
@@ -49,62 +50,42 @@ h1{
 }
 
 
-
-
-nav {
-  background-color: #090909;
-  color: #fff;
-  padding: 10px;
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-nav ul li {
-  margin-bottom: 20px;
-  width: 300px; 
+.dropdown {
   position: relative;
+  display: inline-block;
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  padding: 10px;
-  display: block;
-}
-
-nav ul li:hover ul {
-  display: block;
-}
-
-nav ul ul {
+.dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #adadad;
-  border-radius: 0 0 4px 4px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-nav ul ul li {
-  width: 200px;
-  float: none;
-  display: list-item;
-  position: relative;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-nav ul ul li a {
-  padding: 10px 15px;
-  color: #fff;
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-nav ul ul li a:hover {
-  background-color: #7d7c7c;
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
 }
