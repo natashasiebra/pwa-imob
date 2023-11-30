@@ -1,12 +1,14 @@
-import { warmStrategyCache } from 'workbox-recipes';
+import { offlineFallback, warmStrategyCache } from 'workbox-recipes';
 import { CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
 import { registerRoute, Route } from 'workbox-routing';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 import { ExpirationPlugin } from 'workbox-expiration';
 
+
+
 // configurando o cache
 const pageCache = new CacheFirst({
-  cacheName: 'pwa-geoloc-cache',
+  cacheName: 'imob-cache',
   plugins: [
     new CacheableResponsePlugin({
       statuses: [0, 200],
@@ -37,6 +39,11 @@ registerRoute(
     ],
   }),
 );
+
+//configurando a PG Offline fallback
+offlineFallback({
+  pageFallback:'/Offline.html',
+});
 
 const imageRoute = new Route(({ request }) => {
   return request.destination === 'image';
