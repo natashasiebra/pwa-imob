@@ -11,7 +11,7 @@ async function criarDB(){
                         const store = db.createObjectStore('imob', {
                             keyPath: 'titulo'
                         });
-                        store.createIndex('id', 'id');
+                         store.createIndex('id', 'titulo');
                         console.log("banco de dados criado!");
                 }
             }
@@ -23,7 +23,7 @@ async function criarDB(){
 }
 //createDB é carregado assim que o DOM terminar de carregar
 window.addEventListener('DOMContentLoaded', async event =>{
-    criarDB();
+   await criarDB();
     document.getElementById('btnAdd').addEventListener('click', addImob);
     document.getElementById('btnCarregar').addEventListener('click', buscarImob);
 
@@ -38,31 +38,41 @@ async function buscarImob(){
     const produto = await store.getAll();
     if(produto){
         const divLista = produto.map(imob => {
-            return `<div class="imob">
-            <p><h1>Seus Interesses</h1></p>
-            <p>Nome do Local - ${imob.titulo}</p>
-            <p>Área - ${imob.descricao}</p>
-            <p>Custo - ${imob.custo}</p>
-           </div>`
+            return `<div class="item">
+            <p>Título: ${imob.titulo}</p>
+            <p>Nome:${imob.categoria}</p>
+            <p>Descrição: ${imob.descricao}</p>
+            <p>Data: ${imob.data}</p>
+            <p>Hora: ${imob.dataHora}</p>
+           
+        </div>`;
         });
         listagem(divLista.join(' '));
     }
 }
-async function addImob(event) {
-    const itemDiv = event.target.closest('.item');
-    const tipoImovel = itemDiv.getAttribute('id'); // assuming each div has a unique ID
-    const titulo = itemDiv.querySelector('h2').textContent;
-    const descricao = itemDiv.querySelector('h3').textContent;
-    const custo = itemDiv.querySelector('h4').textContent;
+async function addImob() {
+    console.log('Attempting to addImob');
+    let tipoImovel = document.getElementById("id");
+    let titulo = document.getElementById("titulo");
+    let descricao = document.getElementById("descricao");
+    let custo = document.getElementById("h4");
 
-    const tx = await db.transaction('imob', 'readwrite');
-    const store = tx.objectStore('imob');
+     // Se você tiver adicionado um campo de categoria
+
+    // ... (rest of the code)
+
+    const tx = db.transaction('imob', 'readonly');
+    console.log('Transaction started');
 
     try {
-        await store.add({ tipoImovel, titulo, descricao, custo });
+        await store.add({tipoImovel:id, titulo: titulo, descricao: descricao,custo:h4 });
         await tx.done;
+        limparCampos();
         console.log('Registro adicionado com sucesso!');
-        alert(' Adicionado com sucesso!');
+
+        // Exiba a hora atual no formato "HH:MM:SS" no HTML
+        const resultados = document.getElementById('resultados');
+        resultados.innerHTML = `Anotação adicionada às ${tipoImovel}, ${titulo}, ${descricao}, ${custo}`;
     } catch (error) {
         console.error('Erro ao adicionar registro:', error);
         tx.abort();
@@ -70,11 +80,12 @@ async function addImob(event) {
 }
 
 
-
+function limparCampos() {
+    document.getElementById("ip").value='';
+    document.getElementById("titulo").value = '';
+    document.getElementById("descricao").value = '';
+    document.getElementById("custo").value = '';
+}
 function listagem(text){
     document.getElementById('resultados').innerHTML = text;
 }
-
-
-
-
