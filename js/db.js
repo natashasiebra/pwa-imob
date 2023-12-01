@@ -11,7 +11,7 @@ async function criarDB(){
                         const store = db.createObjectStore('imob', {
                             keyPath: 'titulo'
                         });
-                        store.createIndex('id', 'id');
+                         store.createIndex('id', 'titulo');
                         console.log("banco de dados criado!");
                 }
             }
@@ -23,7 +23,7 @@ async function criarDB(){
 }
 //createDB é carregado assim que o DOM terminar de carregar
 window.addEventListener('DOMContentLoaded', async event =>{
-    criarDB();
+   await criarDB();
     document.getElementById('btnAdd').addEventListener('click', addImob);
     document.getElementById('btnCarregar').addEventListener('click', buscarImob);
 
@@ -49,32 +49,27 @@ async function buscarImob(){
     }
 }
 async function addImob(event) {
+    console.log('Attempting to addImob');
     const itemDiv = event.target.closest('.item');
-    const tipoImovel = itemDiv.getAttribute('id'); // assuming each div has a unique ID
-    const titulo = itemDiv.querySelector('h2').textContent;
-    const descricao = itemDiv.querySelector('h3').textContent;
-    const custo = itemDiv.querySelector('h4').textContent;
+    let tipoImovel = document.getElementById("id");
+    let titulo = document.getElementById("titulo").textContent;
+    let descricao = document.getElementById("descricao").textContent;
+    let custo = document.getElementById("custo").textContent;
 
-    const tx = await db.transaction('imob', 'readwrite');
+    const tx = db.transaction('imob', 'readwrite');
     const store = tx.objectStore('imob');
+    console.log('Transaction started');
 
     try {
-        await store.add({ tipoImovel, titulo, descricao, custo });
+        await store.add({ tipoImovel , titulo,  descricao, custo});
         await tx.done;
         console.log('Registro adicionado com sucesso!');
-        alert(' Adicionado com sucesso!');
-    } catch (error) {
+        } catch (error) {
         console.error('Erro ao adicionar registro:', error);
         tx.abort();
     }
 }
 
-
-
 function listagem(text){
     document.getElementById('resultados').innerHTML = text;
 }
-
-
-
-
