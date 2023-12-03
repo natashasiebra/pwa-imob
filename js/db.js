@@ -73,7 +73,7 @@ async function addImob(event) {
 }
 
     await tx.done;
-}
+
 
 function limparCampos() {
     document.getElementById("ip").value='';
