@@ -1,6 +1,7 @@
 *{
   padding: 0px;
   margin: 0px;
+  
 }
 h1{
   margin-left: 10%;
@@ -33,37 +34,47 @@ max-width: 100%;
   display: block;
         flex-direction: row;
         justify-content: center;
-        flex-wrap: wrap;        
+        flex-wrap: wrap;   
+        overflow-y: hidden;
+     
+             
 }
 .item {
 width: 30%;
 padding: 0px;
 margin: 0px;
+position: relative;
+  display: inline-block;
  /* Adjust the width as needed */
   margin-bottom: 20px; 
+  box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.466), 2px 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #residencial {
   display: flex;  /* Set display to flex to align children horizontally */
-  gap: 20px;
+  gap: 40px;
   margin-top: 2%;
- 
+  margin-left: 5%;
  /* Add some spacing between the items */
 }
 #comercio {
   display: flex;  /* Set display to flex to align children horizontally */
-  gap: 20px;
-
+  gap: 40px;
+  height: 50%;
+  margin-left: 5%;
        /* Add some spacing between the items */
 }
 #terreno  {
   display: flex;  /* Set display to flex to align children horizontally */
-  gap: 20px;
+  gap: 40px;
+  margin-left: 5%;
 
       /* Add some spacing between the items */
 }
 .item img {
   width: 100%;
   object-fit: cover;
+  position: relative;
+  display: inline-block;
 }
 
 
@@ -74,6 +85,7 @@ margin: 0px;
   font-size: 16px;
   border: none;
   cursor: pointer;
+  
 }
 
 .dropdown {
@@ -113,4 +125,66 @@ font-family: Arial, Helvetica, sans-serif;}
 .primeiro{
   background-color: #999999;
   padding: 15px;
+}
+
+.custo {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color:  #737373; /* Cor inicial do botão */
+  color: #fff;
+  border: none;
+}
+
+.item:hover .custo {
+  background-color:#b3b3b3;
+  color: black; /* Cor quando o mouse está sobre a imagem */
+}
+/* O seu código para .dropbtn, .dropdown, .dropdown-content, etc. permanece o mesmo */
+@media only screen and (max-width: 767px){
+  .container {
+    display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;   
+          overflow-y: hidden;
+       
+               
+  }
+  .item {
+    width: 90%;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+      display: inline-block;
+     /* Adjust the width as needed */
+      margin-bottom: 20px; 
+      box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.466), 2px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    #residencial {
+      display: flex;  /* Set display to flex to align children horizontally */
+      gap: 40px;
+      margin-top: 3%;
+      margin-left: 10%;
+      flex-direction: column;
+     /* Add some spacing between the items */
+    }
+    #comercio {
+      display: flex;  /* Set display to flex to align children horizontally */
+      gap: 40px;
+      height: 50%;
+      flex-direction: column;
+      margin-left: 10%;
+           /* Add some spacing between the items */
+    }
+    #terreno  {
+      display: flex;  /* Set display to flex to align children horizontally */
+      gap: 40px;
+      margin-left: 10%;
+      flex-direction: column;
+    
+          /* Add some spacing between the items */
+    }
 }
