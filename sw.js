@@ -42,7 +42,7 @@ registerRoute(
 
 //configurando a PG Offline fallback
 offlineFallback({
-  pageFallback:'/Offline.html',
+  pageFallback:'/offline.html',
 });
 
 const imageRoute = new Route(({ request }) => {

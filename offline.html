@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="exemplo de fallback">
+    <title>Página Offline</title>
+    <link rel="apple-touch-icon" href="images/pwa-icon-256.png" />
+    <link rel='stylesheet' type='text/css' media='screen' href='css/css.css'>
+    <!--viewport para designers responsivos (mobo), content é a configuração-->
+    
+    <link rel="manifest" href="/manifest.json"/>
+    <meta name="theme-color" content="white"/>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script type="module" src="js/main.js"></script>
+   
+</head>
+<body>
+    <style>
+        body{
+    background-color:#191919;
+    color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: monospace;
+}
+.pgOff img{
+   border-radius: 10%;
+   max-width: 100%;
+  
+}
+    </style>
+    <h1>Página Offline</h1>
+    <div class="pgOff">
+        <img src="./images/sem-internet-1.jpg" alt="NOWIFI"/>
+    </div>
+</body>
+</html>
