@@ -11,8 +11,9 @@ async function criarDB(){
                         const store = db.createObjectStore('imob', {
                             keyPath: 'titulo'
                         });
-                         store.createIndex('id', 'titulo');
+                        store.createIndex('id', 'titulo');
                         console.log("banco de dados criado!");
+                        
                 }
             }
         });
@@ -24,8 +25,10 @@ async function criarDB(){
 //createDB é carregado assim que o DOM terminar de carregar
 window.addEventListener('DOMContentLoaded', async event =>{
    await criarDB();
-    document.getElementById('btnAdd').addEventListener('click', addImob);
-    document.getElementById('btnCarregar').addEventListener('click', buscarImob);
+   document.getElementById('btnCarregar').addEventListener('click', buscarImob);
+    document.querySelectorAll('.btnAdd').forEach(button => {
+        button.addEventListener('click', addImob);
+      });
 
 });
 
@@ -49,26 +52,39 @@ async function buscarImob(){
     }
 }
 async function addImob(event) {
-    console.log('Attempting to addImob');
-    const itemDiv = event.target.closest('.item');
-    let tipoImovel = document.getElementById("id");
-    let titulo = document.getElementById("titulo").textContent;
-    let descricao = document.getElementById("descricao").textContent;
-    let custo = document.getElementById("custo").textContent;
+    console.log('it´s working');
+    const button = event.target;
+    const itemDiv = button.closest('.item');
+
+    let tipoImovel = button.getAttribute('data-type');
+    let titulo = itemDiv.querySelector("#titulo").textContent;
+    let descricao = itemDiv.querySelector("#descricao").textContent;
+    let custo = itemDiv.querySelector("#custo").textContent;
 
     const tx = db.transaction('imob', 'readwrite');
     const store = tx.objectStore('imob');
-    console.log('Transaction started');
 
-    try {
-        await store.add({ tipoImovel , titulo,  descricao, custo});
-        await tx.done;
-        console.log('Registro adicionado com sucesso!');
+    // Verificar se a chave (titulo) já existe no objeto de armazenamento
+    const existingItem = await store.get(titulo);
+
+    if (existingItem) {
+        console.log('Registro com a chave já existe:', existingItem);
+        alert('Este item já está na sua lista de interesses!');
+    } else {
+        // A chave não existe, adicione o novo registro
+        try {
+            await store.add({ tipoImovel, titulo, descricao, custo });
+            console.log('Registro adicionado com sucesso:', { tipoImovel, titulo, descricao, custo });
+            alert('O item foi adicionado na sua lista de interesses!');
         } catch (error) {
-        console.error('Erro ao adicionar registro:', error);
-        tx.abort();
+            console.error('Erro ao adicionar registro:', error);
+            tx.abort();
+        }
     }
+
+    await tx.done;
 }
+
 
 function listagem(text){
     document.getElementById('resultados').innerHTML = text;
