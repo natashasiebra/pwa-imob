@@ -163,6 +163,50 @@ font-family: Arial, Helvetica, sans-serif;}
   background-color:#b3b3b3;
   color: black; /* Cor quando o mouse está sobre a imagem */
 }
+#local{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+.cabecalhoConteudo{
+  font-size: 20px;
+}
+.conteudoLocalizacao{
+  font-size: 20px;
+}
+#mapa{
+  margin-top: 2%;
+  height: 100%;
+  width: 100%;
+}
+.botao {
+  margin-top: 1%;
+  left: 20%;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: rgb(9, 129, 73); /* Cor inicial do botão */
+  color: #fff;
+  border: none;
+}
+
+.botao:hover {
+  background-color:rgb(0, 97, 114);
+  color: black; /* Cor quando o mouse está sobre a imagem */
+}
+#btnCarregar {
+  margin-top: 5%;
+ margin-left: 42%;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: rgb(65, 65, 65); /* Cor inicial do botão */
+  color: #fff;
+  border: none;
+}
+
+#btnCarregar:hover {
+  background-color:rgb(82, 82, 82);
+  color: rgb(0, 0, 0); /* Cor quando o mouse está sobre a imagem */
+}
+
 /* O seu código para .dropbtn, .dropdown, .dropdown-content, etc. permanece o mesmo */
 @media only screen and (max-width: 767px){
   .container {
@@ -208,4 +252,41 @@ font-family: Arial, Helvetica, sans-serif;}
     
           /* Add some spacing between the items */
     }
+    #mapa{
+      width: 100%;
+    }
+    .menu-toggle {
+      display: block;
+  }
+
+  .primeiro {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .dropdown {
+      margin-top: 10px;
+  }
+
+  .dropbtn {
+      width: 100%;
+  }
+
+  .dropdown-content {
+      width: 100%;
+      top: 100%;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .dropdown-content a {
+      width: 100%;
+  }
+
+  .dropdown-content.show {
+      display: block;
+  }
+
 }

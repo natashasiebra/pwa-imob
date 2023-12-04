@@ -26,7 +26,7 @@ async function criarDB(){
 window.addEventListener('DOMContentLoaded', async event =>{
    await criarDB();
    document.getElementById('btnCarregar').addEventListener('click', buscarImob);
-    document.querySelectorAll('.btnAdd').forEach(button => {
+    document.querySelectorAll('.custo').forEach(button => {
         button.addEventListener('click', addImob);
       });
 
