@@ -42,7 +42,7 @@ async function buscarImob(){
     if(produto){
         const divLista = produto.map(imob => {
             return `<div class="imob">
-            <p><h1>Seus Interesses</h1></p>
+            <p><h1style="text-aling=center; font-weight: 900;">Seus Interesses</h1></p>
             <p>Nome do Local - ${imob.titulo}</p>
             <p>Área - ${imob.descricao}</p>
             <p>Custo - ${imob.custo}</p>
@@ -59,7 +59,7 @@ async function addImob(event) {
     let tipoImovel = button.getAttribute('data-type');
     let titulo = itemDiv.querySelector("#titulo").textContent;
     let descricao = itemDiv.querySelector("#descricao").textContent;
-    let custo = itemDiv.querySelector("#custo").textContent;
+    let custo = itemDiv.querySelector(".custo").textContent;
 
     const tx = db.transaction('imob', 'readwrite');
     const store = tx.objectStore('imob');

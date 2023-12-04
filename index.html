@@ -73,7 +73,6 @@
           <h4>Comercial </h4>
           <h2  id="titulo">Comercial | São Vicente de Paulo</h2>
           <h3  id="descricao">119 m²</h3>
-         <h4 id="custo"></h2>
         <button class="custo " data-type="comercial">R$ 330.000,00 </button>
                </div>
           <div class="item">
@@ -146,20 +145,21 @@
   </center>
 
   <button id="btnCarregar" >Carregar Meus Interesses </button>
-  <div id="resultados"></div>
-  <footer>
-    <p>Sobre Nós:</p>
+  <div style="font-family: Arial, Helvetica, sans-serif; text-align: center; padding: 0px 2px;" id="resultados"></div>
+  <footer style="background-color: black; height: 200%; width: 100%; color: white; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+    <p class="p">Sobre Nós:</p>
     <img class="img"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAPQElEQVR4nO1dCVAUVxqevSq1u7WbPWuzyW4lm0rKGJFIvBAkGgQVBIcjiCggoCJqJBiVBIyioniAKJAgKJ4EDwzBqATFA0HoRiXexmAgCMzrAeb1IB4ocvxb7yHIMMPcw6D2V/XX0AN0T/9f/+9/7z/eiEQCBAgQIECAAAECBAgQIECAAAECBAgQIEAR38Otl0ow9y4j58YwWOJAhUe2JQ3S/2UC/KbHnwswNgDg18UyyTiW5zaxGF1lMWpheQ5UCcNzD1jMMSyPVpzjpYMENoyIy1LpHxleuoTF6HZvBKgTBqN2ludOlsiQmJAqkKO/RfyqGEuCWIzq9SFCNTnclXMybphAio4ora//N3mqjUWEgpChDnPrmerq3wvEaAEWS0cyPKo1CRmKfqa0SFb1qjaf6YVFCUbjGR7dNzUZ3azlNtsgfcPc990vUSJHdnR21FdkPHX6lefq6l4x9/33K7AN0jcYzOG+IuFRWyuoQIW59dAvUArwO4ZHF/raMlT4lM3m1kW/AIu5ZeoUVVRbDQXoF2NYgBIetrUq/H1rWxsSvcgolnOvszz3UJ1y16xbDSujo/rIn3CXX+iwC8uj3eoUdFZaCe42I+GbotMG+Yq7Lc1dxz2tQguUi14EnOcl/1UXjyKSvGc7BLqLld4nQ9jqtdFkhmQKK7kiehHBYG6tJuUEebhB6r49SmQET/eGL5Z+prfSO62j01p6SgmutRY9d3EoXmrB8hLvYpl0PstznzJyNJ28R35HhMVclSbF7TmaDUV11V3HhVwlhPhOg4jPFgEjk5jQl6CvRM8DSnDNfxiM4hgeSXu9YUyDhSd0VVJfkfFk2KoWPcsovMv9kxDB8lyTrjd/urIMYhPiYHHYxxAdsxIOnS9S+htiJWSYWhoZbhK/oUqKZegd0bOIYhlyYzAn0+emD5zJA8/R1iAebgWL/Jxhyujh4DTYAtZvjlWabSWn7zA6GTnXSmFtbAyETJsCAZMnwaJ5wZCWtZ9ep0TG+YmeNbBybh6DUZs+yshmC0E8Yhj4O9oAKtsG0PQtPJIfgPhIP5gwaCCsjVun8Rx5t65R69p7Mkfn66ek7wRfR3vYm5IAVy8UwPWLZyF7zzYIcB4PoTP94cSta0miZwkMj8L1fTJPV5bBlLGjKRm15duh/X4WPOT3U1LaH2RB4rIZakkhBITNDYZJVkPo6+GLJTpdn0wW5niKQS77BdpaGxTk4YNaiFoQAnN9fWpFzwpYnnPW1zJYnoNVa1aAi9VgqLqeQkn46UIizHC0peRoQ8r8AD/YkBBHLUTXa5NQjI/9GJBUXlcio1Me3JPCNPsx7QkpScHioUNmeVgP/8nZclCLq5XlAy8b65MOFgP6T9bx7J2qvxoSmT0rvQ1uI4ZB8qpAqvxOyfk6AqJCPLqOtbEUfWT/qWPwaaBvr2R0yu6kOHC3tYYFPl7tPxTlQdP9WmhsqIH8nIPgM9au0d166CxRfwCJihqikLSDe2GixbtQdSNVgZBOqavYAXz1biVSEtO26HW94voauuKPXBwGkeGL4PMlCyFp7UqNhJTfvABxS8Oh+ZFM6XcNskrwGWPXOGHgQPNWtJTeRf9gMffIEEJCZwfCfE8HlWQQKcqJVhq+YhZ6g+vQIVBQU67z8LQgyB+2xK2BS+xJyMveC9MdPoTE6GUaCdEkp45ktk8dM/obsxJCy3EMIONM9c/gPGQw7Nk8v1dCiBzbFwl+DqOA+zmNHldeS6ZWcrDwpE7XS0xLhn3bkxUUSYYdXFdBfyYzq32piXDzKqMzIY3yavCytZaalRCWR+cNIWTnoUyqWOLE1RHSk5SL+bH0/47duKTxGmRhSYam2Z5u4GVnQxWnSqFFeYfgUskpvayj8tZlOJS+DaaOsW11GjxoxcS33nqpz8k41yj5uyEzK5bnYGnEEvD+YASd5moihEjuvkiYbm8NARNHQ1hIkMbzx26Og3nenlB4PJvOoqorrioosvUxD7+UXQRcWwE5B3bpRQZz6ggwJ49Aa4scZNIKiI1Y3ORhPfK6w9A3X+4TElieW8Rg7izLo7uGkMHyHEy1/wA2RkzXigwijVw6TBtrDR42I+FUxU215966Lx2iwuZBy2OsUpFkfZG9ZytcLS2A7fExelvH0f07ld47uCO5ZYqdzRGTEVGK0B9YnlujKZunq8z19YHQKY5akXGHS4c54nEwY7KzRjKIzPSYrHJ4Kj5xGL77Og32JMXR9YWhzlyVEMvzd7RvdB448HWjk8HUVb/FYnTNmET09CHXiuN1IONHjec99uNliJwfrKSoC4W5cPOK7g5bH4lf9lnT+IED3Yye42Z4rsYUZLAdeQYIFDtD5Eyx0cggknO1FCLmzlJS0pmcb/qEDCJfrl7WPNFioK/RyMgH+G1HCb9pyGC7rOQgtZLLhXEGD1NdRMskMNtT3Kv/MLU8bsbg5zD2ntPgAYONRsiTzJ7SzXYvDDCalXi4Ul9CFn3dCZnv6UiDjrqQ0Slxm2IhIzXBLITsToxt+2jUiAtGI4P0TZAsmamtg30iu49+S62k8Ei0AiFp6+eAk+UgnaO3nUms0EB/iF/+OV0n6GMtj5rqQHL7utZCwvYrQ+eBp83Iuknvvf2a0QhhZdKx3S2it4IyY8rHgb4Q5GQHj+9kdhFytzYDPKzfh9BgzWuO3uJWialfQpDYBSZZWVLStZGsrAyoflAP29K+gumO47SW4CkeNB/z3YWzjiJjguHRqr6yDvaJHL18noZR0hM+VrCSzJQwqqS9ebonncwlxTJuuN7KJ0XF2lSHaSouM4bVrFkXTfMi1T8+jfw2NxwAP0dbmOpgr3Mw0VzCyGuN58wJWIwKzHEjRbXVEDDZGT72dICWu990kXKpII6G6Emopd+TgVF7CcZ/NpiEbpZSzvCoRNcyS2P5lWy2EJzfs1CKACctD6Ck7Dqc1b8J4bkykbHB8Nwhc95UbEIsOFsOUljBN+H9NKhICiGOXj7XjwlBXxqdEJZH8dqWWZrkpjCCsOBAGgnGVbu6SCF5EPGw98DH0R7yynTPn/cUU/gkk3T1spjzNPeTll/1M0yfYA+feI9XmAozuWvAafAg8HN1hhPlN/Q695aMneBpZ0Nnb+Q1Ze8uY33umyJTgDglc/T3sSqSS+IR70NM2BSFnMmx/Uth4uBBMG2io1ZJqu5CCiQIEeEBLpCVtgjCZ7gYtXCCwWiBSUhhMdpibkLYJzVXZFFHnHp3J5+fHQWThliAh+0oWjmiCxkJy2Z0hWnIa8Iyf+ORglEraVg1TaF0X7Yk873LjuwDdJjaGReiQMrVonjwthtBwyuks4pMmzWT4U9JINPq5oZMk5BCet5Nsm0Hgzl/c5PBPhFSukOGqdSY2QpBSOL0I2aKqTJnuLmoLM7uSUanLwoRf0gjyiYhRS5xFZmjCbMvZWtmBg2vkHrftvtPF45EmTkZn9MibWItZAF54ufrvZLRKemb58OmSD+F8zwlZa2hn3e7SQjpIEUawPCo0RhKPfwDC2vXroKwWQHwRfinOi/00o8dhsnDrGD5HHe4L9urWFT3y05Yt8iHLiAnD+sISvZGRnepuZkK9+oylEhJ3Zfef3tKaA8gzyWxPLqn74fctm83LWo+/m0GDVWT11niSRAetgAYWY3W5yFNn15jRkOQ0xiVFY9lpUmwNNiNEqOJDCKHd4fT4YsUUVBS7mfBwmlOEOjuqv/Dh1FLn2z/RHZuo+F5OTeXwSiSwdzCjlf1JUHfXSiGML+ptNqje86h+WE9qZelxdJkmInfkghRURGw8ctNcPynK72ej6xBQny9wW2EFZzKilKpaNLWoImMTjmwJQxmu3wA8po99Pjg1k/Bxeo9g3pQmDvVfxOZC5oKrqOXR9DyTVWJoCvnz8Dk4UNhlpsLHNyVAqePZMKW9atouY+6IY3kO1ZFL6eWEBPm3TXs6CvdSYmP8AVfJ0eDhucimexPZiOErFIVng5ZDWxMjKPJIdKN9NHoUXDvjkQlIS2PMSTHrIA7fJXC+6RChPxfXtlVtTeecfworfHyGWutlHXUhxT/caNoLK1n55ZuPgQ9Js2s5iMEo9zuH2jD+jWwdE4g1KEymt6MWfKJ0nDVpoWs+GQubEjYqFWdcMSShdRavgh2B8nNrXoRQtY2zkMswM9lok5+TYkQHt0QmRMMj1bn374FGzaug9CgGeA+cjjIpOUGFwykrFsFs6d+pHXciqza/V2d6BNOHHr34KQ6aZR+Dbs2zqUJsoXzZiu0X+vp1FPMSsi2zIw50xw+hK/WLIfzBcfgxqUig4hoflhPqwuPHNgFK0NDwMvOFrKK87VSBvEtm7cm0+HOdagl7IibS/PzPUkgbXPF36+G9Yt9wOV9S/CwHUknFcZosyZb1JqVEL/x48pJBbixSmluXCqCeu5W1zGpvfV31m0YIb3sZLbmaWsN4mFDIGX1TLh1MYl2Z5FpMSGBrP7nzfChEV9ddxlSYx0FZiXD+d13X/G0HtFCalpNWe80x2MyZJec1VlBBZIK6oe8PugIuZNmn0+CgyBpR6raqbWe0mT0nLqucBgw4FVvO5sWU5LR1toA87w9IOOE/tUnxC+QRWWRtMrYJDzdExhLA0T9AV6jR+HL5/JNRkbFTz+QAjQ6mzKFMo1ARhuLUaiov8Bt+HAXj1Ejmwpyv4W7d2qMRsT9RkRbCEgvYM+dgPqLkLgVw3MTRf0N4y3ecXQb9v6lSUMs29VVBjpZWsDRU7ng7zQBck/ndgTytiTA7fuyruNOIcmp2V7uBg1VhglawWAulcWovAcJzSzmisjuFWT7c1F/RsdWTLpvPMP2M2F4LqFnB9n5O7VvMrj6NbJZp+hZAoslgeZRIjLKLtgM5gqfOaVrAnnC+viJLmNra/9VwnOLDWlIZXh02qyBQVOBBNcYjJL7hBCMrpGhRGH/FXUbp6k+RwuL0YbnzjKUSeGiDG2hZtUrMpfsudLz2qVy+cu0WRVzcvXDE3rMYm4v8X2iFwUlcukkE3zLwUOWR59pyszRpBrPOXXMmFA6y6NM8ko33sScZ35D5V9ELyLIU0zqvegTyRvgKzBqp/XH9TVvm/uenguQL+piiMPHHK+j0ybVlNuLGyRW5r6H5xLfk6EEI0f6DTc8l0e+KqKzhLVj4YVuMzzKpzubyiWuwrfgCBAgQIAAAQIECBAgQIAAAQIECBAgQIAAAQIEiJ4p/B9qXLTLYgc06QAAAABJRU5ErkJggg==">
     <p class="contato">Camilly Silva - Telefone: (11) 1234-5678</p> 
-    
-    <p class="contato">Natasha Siebra - Telefone: (11) 8765-4321</p>
+    <p class="contato1">Natasha Siebra - Telefone: (11) 8765-4321</p>
+
+    <img class="img1" src="https://cdn-icons-png.flaticon.com/512/3507/3507554.png"/>
     <div class="email">
-      <img class="img1" src="https://cdn-icons-png.flaticon.com/512/3507/3507554.png"/>
     <p>Email: camilly@gmail.com</p>
     <p > Email: natasha@gmail.com</p>
+
    </div>
    <img class="img2" width="100" height="100" src="https://img.icons8.com/clouds/100/marker.png" alt="marker"/>
-   <div id="rua2">
+   <div style="height: 100%;" id="rua2">
    <p class="rua">Rua dos Bobos, 000</p>
    <p class="rua">Nova AndradinaMato Grosso do Sul, 79750-000</p>
   </div>

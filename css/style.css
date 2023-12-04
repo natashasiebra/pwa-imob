@@ -192,7 +192,7 @@ font-family: Arial, Helvetica, sans-serif;}
 }
 #btnCarregar {
   margin-top: 5%;
- margin-left: 42%;
+ margin-left: 41%;
   font-size: 18px;
   padding: 10px 20px;
   background-color: rgb(65, 65, 65); /* Cor inicial do botão */
@@ -204,53 +204,44 @@ font-family: Arial, Helvetica, sans-serif;}
   background-color:rgb(82, 82, 82);
   color: rgb(0, 0, 0); /* Cor quando o mouse está sobre a imagem */
 }
-#resultado{
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-footer{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  background-color: black;
-  color: white;
-  height: 200%;
-}
-p{
-  margin-top: 2%;
-}
+
 .contato{
+  margin-top: -5%;
+  margin-left: 15%;
+}
+.contato1{
+  margin-top: -0.1%;
   margin-left: 15%;
 }
 .email{
-  margin-left: 22%;
-  margin-top: 5%;
+  margin-top: -3.7%;
+  margin-left: 15%;
+
 }
 .img{
-  position: absolute;
-  top: 388%;
+  margin-left: 2%;
   border: 2px solid black;
   width: 5%;
   height: 10%;
   margin-left: 8%;
 }
 .img1{
-  position: absolute;
-  top: 406%;
-  left: 16%;
-  width: 5%;
-  height: 10%;
+  margin-left: 8.5%;
+  margin-top: 2%;
+  width: 4%;
+  height: 7%;
 }
 .img2{
-  position:absolute;
-  top: 420%;
-  left: 6%;
+margin-left: 7%;
+margin-top: 3%;
+width: 5%;
+height: 7%;
 }
 .rua{
   margin-left: 15%;
 }
 #rua2{
-  margin-top: 3%;
+  margin-top: -4%;
 }
 /* O seu código para .dropbtn, .dropdown, .dropdown-content, etc. permanece o mesmo */
 @media only screen and (max-width: 767px){
@@ -329,7 +320,9 @@ p{
   .dropbtn {
       width: 100%;
   }
-
+.p{
+  display: none;
+}
   .dropdown-content {
       width: 100%;
       top: 100%;
@@ -355,5 +348,16 @@ p{
   .img2{
    display: none;
   }
-
+  .contato{
+    display: none;
+  }
+  .contato1{
+     display: none;
+  }
+  .email{
+    display: none;
+  }
+  #rua2{
+   display: none;
+  }
 }
