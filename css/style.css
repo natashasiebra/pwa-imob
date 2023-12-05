@@ -197,7 +197,24 @@ font-family: Arial, Helvetica, sans-serif;}
 }
 #btnCarregar {
   margin-top: 5%;
- margin-left: 41%;
+ margin-left: 5%;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: rgb(65, 65, 65); /* Cor inicial do botão */
+  color: #fff;
+  border: none;
+}
+footer{
+  margin-top: 10%;
+}
+
+#btnCarregar:hover {
+  background-color:rgb(82, 82, 82);
+  color: rgb(0, 0, 0); /* Cor quando o mouse está sobre a imagem */
+}
+#btnCadastrar {
+  margin-left: 2%;
+  margin-top: 5%;
   font-size: 18px;
   padding: 10px 20px;
   background-color: rgb(65, 65, 65); /* Cor inicial do botão */
@@ -205,7 +222,7 @@ font-family: Arial, Helvetica, sans-serif;}
   border: none;
 }
 
-#btnCarregar:hover {
+#btnCadastrar:hover {
   background-color:rgb(82, 82, 82);
   color: rgb(0, 0, 0); /* Cor quando o mouse está sobre a imagem */
 }
@@ -247,6 +264,53 @@ height: 7%;
 }
 #rua2{
   margin-top: -4%;
+}
+
+#imovelformulario{
+margin-left: 32%;
+font-size: 15px;
+font-family: Arial, Helvetica, sans-serif;
+}
+#tipoImovel{
+  padding: 12px 42px;
+  border-radius: 10px;
+  margin-left: 0.5%;
+  border: none; /* Remove a borda */
+  outline: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.062), 0 6px 10px 0 rgba(0, 0, 0, 0.11);
+}
+input{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.062), 0 6px 10px 0 rgba(0, 0, 0, 0.11);
+  font-weight: 600;
+  color: black;
+  border-radius: 10px;
+  margin-top: 3%;
+  display: block;
+  padding: 12px 40px;
+  margin-left: 12%;
+  border: none; /* Remove a borda */
+  outline: none;
+}
+label{
+  font-weight: 600;
+  margin-left: 12%;
+}
+#resultados{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+.imob{
+  background-color: white;
+  
+}
+#imob{
+  margin-left: 20%;
+  padding: 5px 0px;
+  font-size: 17px;
+}
+.mapinha{
+  width: 20%;
+  height: 30%;
 }
 /* O seu código para .dropbtn, .dropdown, .dropdown-content, etc. permanece o mesmo */
 @media only screen and (max-width: 767px){
@@ -301,15 +365,30 @@ height: 7%;
   }
   #btnCarregar {
     margin-top: 5%;
-   margin-left: 17%;
-    font-size: 18px;
-    padding: 10px 20px;
+   margin-left: 20%;
+    font-size: 15px;
+    padding: 10px 10px;
     background-color: rgb(65, 65, 65); /* Cor inicial do botão */
     color: #fff;
     border: none;
   }
   
   #btnCarregar:hover {
+    background-color:rgb(82, 82, 82);
+    color: rgb(0, 0, 0); /* Cor quando o mouse está sobre a imagem */
+  }
+  #btnCadastrar {
+    display: flex;
+    margin-left: 25%;
+    margin-top: 5%;
+    font-size: 15px;
+    padding: 10px 10px;
+    background-color: rgb(65, 65, 65); /* Cor inicial do botão */
+    color: #fff;
+    border: none;
+  }
+  
+  #btnCadastrar:hover {
     background-color:rgb(82, 82, 82);
     color: rgb(0, 0, 0); /* Cor quando o mouse está sobre a imagem */
   }
@@ -364,5 +443,62 @@ height: 7%;
   }
   #rua2{
    display: none;
+  }
+  
+#imovelformulario{
+  margin-left: 7%;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+  #tipoImovel{
+    padding: 12px 42px;
+    border-radius: 10px;
+    margin-left: 0.5%;
+    border: none; /* Remove a borda */
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.062), 0 6px 10px 0 rgba(0, 0, 0, 0.11);
+  }
+  input{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.062), 0 6px 10px 0 rgba(0, 0, 0, 0.11);
+    font-weight: 600;
+    color: black;
+    border-radius: 10px;
+    margin-top: 3%;
+    display: block;
+    padding: 12px 40px;
+
+    border: none; /* Remove a borda */
+    outline: none;
+  }
+  label{
+    font-weight: 600;
+    margin-left: 12%;
+  }
+  #resultados{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+  }
+  .imob{
+    background-color: white;
+    
+  }
+  #imob{
+    margin-left: 25%;
+    padding: 5px 0px;
+    font-size: 15px;
+  }
+  .mapinha{
+    width: 20%;
+    height: 30%;
+  }
+  #gmap_canvas_{
+    width: 10%;
+    height: 10%;
+  }
+  .mapa{
+    width: 50%;
+  }
+  element.style{
+    width: 50%;
   }
 }

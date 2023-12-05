@@ -41,22 +41,26 @@ async function buscarImob() {
     if (imobil) {
         const divLista = imobil.map(imob => {
             return `<div class="imob">
-                <h1 style="text-align: center; font-weight: 900;">Novos Imóveis</h1>
+            <div id="imob">
+                <h1 >Novos Imóveis</h1>
                 <p>${imob.tipoImovel}</p>
                 <p>Nome do Local - ${imob.titulo}</p>
                 <p>Descrição - ${imob.descricao}</p>
                 <p>Custo R$ -${imob.custo}</p>
                 <p>Latitude:${imob.latitude}</p>
                 <p>Longitude:${imob.longitude}</p>
+                </div>
                 <div class="mapinha">
                 <div class="gmap_canvas">
-                    <iframe width="600" height="500" id="gmap_canvas_${imob.titulo}" 
+                <div class="mapa">
+                    <iframe width="480" height="480" id="gmap_canvas_${imob.titulo}" 
                         src="https://maps.google.com/maps?q=${imob.latitude}%2C${imob.longitude}&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                         frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
                     <a href="https://123movies-i.net"></a>
-                    <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style>
+                    <style>.mapouter{position:relative;text-align:right;height:00px;width:200px;}</style>
                                 <a href="https://www.embedgooglemap.net">google maps embed</a>
-                                <style>.gmap_canvas{overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+                                <style>.gmap_canvas{overflow:hidden;background:none!important;height:500px;width:350px;}</style>
                     <br/>
                 </div>
             </div>
