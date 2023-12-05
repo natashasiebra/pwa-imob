@@ -53,14 +53,14 @@ async function buscarImob() {
                 <div class="mapinha">
                 <div class="gmap_canvas">
                 <div class="mapa">
-                    <iframe width="480" height="480" id="gmap_canvas_${imob.titulo}" 
+                    <iframe width="500" height="480" id="gmap_canvas_${imob.titulo}" 
                         src="https://maps.google.com/maps?q=${imob.latitude}%2C${imob.longitude}&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                         frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                         </div>
                     <a href="https://123movies-i.net"></a>
                     <style>.mapouter{position:relative;text-align:right;height:00px;width:200px;}</style>
                                 <a href="https://www.embedgooglemap.net">google maps embed</a>
-                                <style>.gmap_canvas{overflow:hidden;background:none!important;height:500px;width:350px;}</style>
+                                <style>.gmap_canvas{overflow:hidden;background:none!important;height:500px;width:500px;}</style>
                     <br/>
                 </div>
             </div>
