@@ -25,6 +25,11 @@ h4{
   font-family: Arial, Helvetica, sans-serif;
   padding:0px 50px;
 }
+
+.imob{
+  width: 80%;
+  background-color: aqua;
+}
 .app{
 max-width: 100%;
   overflow-x: hidden;
@@ -33,12 +38,31 @@ max-width: 100%;
   display: block;
         flex-direction: row;
         justify-content: center;
+
+        flex-wrap: wrap;   
+        overflow-y: hidden;
+     
+             
+
         flex-wrap: wrap;        
+
 }
 .item {
 width: 30%;
 padding: 0px;
 margin: 0px;
+position: relative;
+  display: inline-block;
+ /* Adjust the width as needed */
+  margin-bottom: 20px; 
+  box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.466), 2px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#residencial {
+  display: flex;  /* Set display to flex to align children horizontally */
+  gap: 40px;
+  margin-top: 2%;
+  margin-left: 5%;
+
  /* Adjust the width as needed */
   margin-bottom: 20px; 
 }
@@ -47,16 +71,26 @@ margin: 0px;
   gap: 20px;
   margin-top: 2%;
  
+
  /* Add some spacing between the items */
 }
 #comercio {
   display: flex;  /* Set display to flex to align children horizontally */
+
+  gap: 40px;
+  height: 50%;
+  margin-left: 5%;
+
   gap: 20px;
 
        /* Add some spacing between the items */
 }
 #terreno  {
   display: flex;  /* Set display to flex to align children horizontally */
+
+  gap: 40px;
+  margin-left: 5%;
+
   gap: 20px;
 
       /* Add some spacing between the items */
@@ -64,6 +98,7 @@ margin: 0px;
 .item img {
   width: 100%;
   object-fit: cover;
+
 }
 
 
@@ -79,7 +114,7 @@ margin: 0px;
 .dropdown {
   position: relative;
   display: inline-block;
-  padding:0px 20px;
+  padding:0px 10px;
 }
 
 .dropdown-content {
@@ -113,4 +148,221 @@ font-family: Arial, Helvetica, sans-serif;}
 .primeiro{
   background-color: #999999;
   padding: 15px;
+
+}
+
+.custo {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color:  #737373; /* Cor inicial do botão */
+  color: #fff;
+  border: none;
+}
+
+.item:hover .custo {
+  background-color:#b3b3b3;
+  color: black; /* Cor quando o mouse está sobre a imagem */
+}
+#local{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+.cabecalhoConteudo{
+  font-size: 20px;
+}
+.conteudoLocalizacao{
+  font-size: 20px;
+}
+#mapa{
+  margin-top: 2%;
+  height: 100%;
+  width: 100%;
+}
+.botao {
+  margin-top: 1%;
+  left: 20%;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: rgb(9, 129, 73); /* Cor inicial do botão */
+  color: #fff;
+  border: none;
+}
+
+.botao:hover {
+  background-color:rgb(0, 97, 114);
+  color: black; /* Cor quando o mouse está sobre a imagem */
+}
+#btnCarregar {
+  margin-top: 5%;
+ margin-left: 41%;
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: rgb(65, 65, 65); /* Cor inicial do botão */
+  color: #fff;
+  border: none;
+}
+
+#btnCarregar:hover {
+  background-color:rgb(82, 82, 82);
+  color: rgb(0, 0, 0); /* Cor quando o mouse está sobre a imagem */
+}
+
+.contato{
+  margin-top: -5%;
+  margin-left: 15%;
+}
+.contato1{
+  margin-top: -0.1%;
+  margin-left: 15%;
+}
+.email{
+  margin-top: -3.7%;
+  margin-left: 15%;
+
+}
+.img{
+  margin-left: 2%;
+  border: 2px solid black;
+  width: 5%;
+  height: 10%;
+  margin-left: 8%;
+}
+.img1{
+  margin-left: 8.5%;
+  margin-top: 2%;
+  width: 4%;
+  height: 7%;
+}
+.img2{
+margin-left: 7%;
+margin-top: 3%;
+width: 5%;
+height: 7%;
+}
+.rua{
+  margin-left: 15%;
+}
+#rua2{
+  margin-top: -4%;
+}
+/* O seu código para .dropbtn, .dropdown, .dropdown-content, etc. permanece o mesmo */
+@media only screen and (max-width: 767px){
+  .container {
+    display: flex;
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;   
+          overflow-y: hidden;
+       
+               
+  }
+  .item {
+    width: 90%;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+      display: inline-block;
+     /* Adjust the width as needed */
+      margin-bottom: 20px; 
+      box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.466), 2px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    #residencial {
+      display: flex;  /* Set display to flex to align children horizontally */
+      gap: 40px;
+      margin-top: 3%;
+      margin-left: 10%;
+      flex-direction: column;
+     /* Add some spacing between the items */
+    }
+    #comercio {
+      display: flex;  /* Set display to flex to align children horizontally */
+      gap: 40px;
+      height: 50%;
+      flex-direction: column;
+      margin-left: 10%;
+           /* Add some spacing between the items */
+    }
+    #terreno  {
+      display: flex;  /* Set display to flex to align children horizontally */
+      gap: 40px;
+      margin-left: 10%;
+      flex-direction: column;
+    
+          /* Add some spacing between the items */
+    }
+    #mapa{
+      width: 100%;
+    }
+    .menu-toggle {
+      display: block;
+  }
+  #btnCarregar {
+    margin-top: 5%;
+   margin-left: 17%;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: rgb(65, 65, 65); /* Cor inicial do botão */
+    color: #fff;
+    border: none;
+  }
+  
+  #btnCarregar:hover {
+    background-color:rgb(82, 82, 82);
+    color: rgb(0, 0, 0); /* Cor quando o mouse está sobre a imagem */
+  }
+  .primeiro {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .dropdown {
+      margin-top: 10px;
+  }
+
+  .dropbtn {
+      width: 100%;
+  }
+.p{
+  display: none;
+}
+  .dropdown-content {
+      width: 100%;
+      top: 100%;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+
+  .dropdown-content a {
+      width: 100%;
+  }
+
+  .dropdown-content.show {
+      display: block;
+  }
+  .img{
+   display: none;
+  }
+  .img1{
+   display: none;
+  }
+  .img2{
+   display: none;
+  }
+  .contato{
+    display: none;
+  }
+  .contato1{
+     display: none;
+  }
+  .email{
+    display: none;
+  }
+  #rua2{
+   display: none;
+  }
 }
